@@ -1,0 +1,154 @@
+@import '../../../style/theme-utilities';
+
+@keyframes bounce {
+  0% {
+    margin-right: -600px;
+  }
+  25% {
+    margin-right: 10px;
+  }
+  50% {
+    margin-right: 30px;
+  }
+  60% {
+    margin-right: 0;
+  }
+  65% {
+    margin-right: 10px;
+  }
+  70% {
+    margin-right: 20px;
+  }
+  75% {
+    margin-right: 10px;
+  }
+  80% {
+    margin-right: 20px;
+  }
+  85% {
+    margin-right: 15px;
+  }
+  90% {
+    margin-right: 10px;
+  }
+  95% {
+    margin-right: 5px;
+  }
+  100% {
+    margin-right: 2px;
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  5%,
+  10%,
+  15%,
+  20%,
+  25%,
+  30%,
+  35%,
+  40%,
+  45%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.6, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  5% {
+    transform: scale3d(0.55, 0.55, 0.55);
+  }
+
+  10% {
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+
+  15% {
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  25% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  30% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  35% {
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  45% {
+    transform: scale3d(0.9325, 0.9325, 0.9325);
+  }
+
+  50% {
+    transform: scale3d(0.965, 0.965, 0.965);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  90% {
+    transform: scale3d(0.985, 0.985, 0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+// levels wanted for this component
+$notif-levels: (alert, warning, success, error, info);
+
+.plm-notification-snackbar {
+  animation-name: bounce;
+  animation-duration: 1s;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  font-size: map-get($fontSizes, m);
+  min-height: 55px;
+  width: 600px;
+
+  &.mini {
+    min-height: 32px;
+    max-height: 32px;
+  }
+
+  &.local {
+    position: relative;
+    margin: auto;
+  }
+}
